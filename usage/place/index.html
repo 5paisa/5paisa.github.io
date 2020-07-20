@@ -249,12 +249,77 @@
     Placing an order
   </a>
   
+    <nav class="md-nav" aria-label="Placing an order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detailed-usage" class="md-nav__link">
+    Detailed Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-an-intraday-order" class="md-nav__link">
+    Placing an intraday order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-a-stoploss-order" class="md-nav__link">
+    Placing a stoploss order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-offline-orders" class="md-nav__link">
+    Placing offline orders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../modify/" title="Modiying an order" class="md-nav__link">
+      Modiying an order
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cancel/" title="Canceling an order" class="md-nav__link">
+      Canceling an order
+    </a>
   </li>
 
         
@@ -303,6 +368,47 @@
     Placing an order
   </a>
   
+    <nav class="md-nav" aria-label="Placing an order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#detailed-usage" class="md-nav__link">
+    Detailed Usage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-an-intraday-order" class="md-nav__link">
+    Placing an intraday order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-a-stoploss-order" class="md-nav__link">
+    Placing a stoploss order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#placing-offline-orders" class="md-nav__link">
+    Placing offline orders
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -323,16 +429,90 @@
                 
                   <h1>Placing an order</h1>
                 
-                <h3 id="placing-an-order">Placing an order</h3>
-<div class="codehilite"><pre><span></span><code><span class="c1"># This is an indicative order.</span>
+                <h2 id="placing-an-order">Placing an order</h2>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Note: This is an indicative order.</span>
 
-<span class="kn">from</span> <span class="nn">py5paisa.order</span> <span class="kn">import</span> <span class="n">Order</span><span class="p">,</span> <span class="n">OrderType</span><span class="p">,</span> <span class="n">Exchange</span><span class="p">,</span> <span class="n">ExchangeType</span>
+<span class="kn">from</span> <span class="nn">py5paisa.order</span> <span class="kn">import</span> <span class="n">Order</span><span class="p">,</span> <span class="n">OrderType</span>
 
-<span class="n">test_order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_for</span><span class="o">=</span><span class="n">OrderType</span><span class="o">.</span><span class="n">PLACE</span><span class="p">,</span> <span class="n">exchange</span><span class="o">=</span><span class="n">Exchange</span><span class="o">.</span><span class="n">BSE</span><span class="p">,</span> <span class="n">exchange_type</span><span class="o">=</span><span class="n">ExchangeType</span><span class="o">.</span><span class="n">CASH</span><span class="p">,</span> <span class="n">price</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span>
-            <span class="n">order_id</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">order_type</span><span class="o">=</span><span class="s2">&quot;BUY&quot;</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">scrip_code</span><span class="o">=</span><span class="mi">500875</span><span class="p">,</span> <span class="n">atmarket</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">remote_order_id</span><span class="o">=</span><span class="s2">&quot;23324&quot;</span><span class="p">,</span> <span class="n">exch_order_id</span><span class="o">=</span><span class="s2">&quot;0&quot;</span><span class="p">,</span> <span class="n">disqty</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">stoploss_price</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">is_stoploss_order</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">ioc_order</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_intraday</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">is_vtd</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">vtd</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">ahplaced</span><span class="o">=</span><span class="s2">&quot;Y&quot;</span><span class="p">,</span> <span class="n">public_ip</span><span class="o">=</span><span class="s2">&quot;45.112.149.104&quot;</span><span class="p">,</span> <span class="n">order_validity</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">traded_qty</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">test_order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_type</span><span class="o">=</span><span class="n">OrderType</span><span class="o">.</span><span class="n">BUY</span><span class="p">,</span> <span class="n">scrip_code</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">test_order</span><span class="p">))</span>
+<span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">test_order</span><span class="p">)</span>
 </code></pre></div>
+
+
+<h4 id="detailed-usage">Detailed Usage</h4>
+<h4 id="placing-an-intraday-order">Placing an intraday order</h4>
+<p>By default orders are delivery, to place an intraday order, pass <code>is_intraday=True</code></p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">py5paisa.order</span> <span class="kn">import</span> <span class="n">Order</span><span class="p">,</span> <span class="n">OrderType</span>
+
+<span class="n">test_order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_type</span><span class="o">=</span><span class="n">OrderType</span><span class="o">.</span><span class="n">BUY</span><span class="p">,</span> <span class="n">scrip_code</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">is_intraday</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">test_order</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h4 id="placing-a-stoploss-order">Placing a stoploss order</h4>
+<p>By default orders are regular, to place a stoploss order, pass <code>is_stoploss_order=True</code> and <code>stoploss_price</code></p>
+<p><code>stoploss_price</code> is a float and for Buy Stop loss, Trigger price should not be greater than Limit Price. And for Sell Stop Loss Order Trigger Price should not be less than Limit Price.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">py5paisa.order</span> <span class="kn">import</span> <span class="n">Order</span><span class="p">,</span> <span class="n">OrderType</span>
+
+<span class="n">test_order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_type</span><span class="o">=</span><span class="n">OrderType</span><span class="o">.</span><span class="n">BUY</span><span class="p">,</span> <span class="n">scrip_code</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">is_stoploss</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">stoploss_price</span><span class="o">=</span><span class="mf">123.0</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">test_order</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h4 id="placing-offline-orders">Placing offline orders</h4>
+<p>By default all orders are normal orders, pass <code>ahplaced=AHPlaced.AFTER_MARKET_CLOSED</code> to place offline orders.</p>
+<div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">py5paisa.order</span> <span class="kn">import</span> <span class="n">Order</span><span class="p">,</span> <span class="n">OrderType</span><span class="p">,</span> <span class="n">AHPlaced</span>
+
+<span class="n">test_order</span> <span class="o">=</span> <span class="n">Order</span><span class="p">(</span><span class="n">order_type</span><span class="o">=</span><span class="n">OrderType</span><span class="o">.</span><span class="n">BUY</span><span class="p">,</span> <span class="n">scrip_code</span><span class="o">=</span><span class="mi">11111</span><span class="p">,</span> <span class="n">quantity</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">ahplaced</span><span class="o">=</span><span class="n">AHPlaced</span><span class="o">.</span><span class="n">AFTER_MARKET_CLOSED</span><span class="p">)</span>
+<span class="n">client</span><span class="o">.</span><span class="n">place_order</span><span class="p">(</span><span class="n">test_order</span><span class="p">)</span>
+</code></pre></div>
+
+
+<h4 id="enums">Enums</h4>
+<p>Following are the enums which can be imported and used for placing more complex orders.</p>
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">Exchange</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">NSE</span> <span class="o">=</span> <span class="s2">&quot;N&quot;</span>
+    <span class="n">BSE</span> <span class="o">=</span> <span class="s2">&quot;B&quot;</span>
+    <span class="n">MCX</span> <span class="o">=</span> <span class="s2">&quot;M&quot;</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">ExchangeSegment</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">CASH</span> <span class="o">=</span> <span class="s2">&quot;C&quot;</span>
+    <span class="n">DERIVATIVE</span> <span class="o">=</span> <span class="s2">&quot;D&quot;</span>
+    <span class="n">CURRENCY</span> <span class="o">=</span> <span class="s2">&quot;U&quot;</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">OrderType</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">BUY</span> <span class="o">=</span> <span class="s2">&quot;BUY&quot;</span>
+    <span class="n">SELL</span> <span class="o">=</span> <span class="s2">&quot;SELL&quot;</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">OrderValidity</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">DAY</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">GTD</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">GTC</span> <span class="o">=</span> <span class="mi">2</span>
+    <span class="n">IOC</span> <span class="o">=</span> <span class="mi">3</span>
+    <span class="n">EOS</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">FOK</span> <span class="o">=</span> <span class="mi">6</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="k">class</span> <span class="nc">AHPlaced</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+
+    <span class="n">AFTER_MARKET_CLOSED</span> <span class="o">=</span> <span class="s2">&quot;Y&quot;</span>
+    <span class="n">NORMAL_ORDER</span> <span class="o">=</span> <span class="s2">&quot;N&quot;</span>
+</code></pre></div>
+
+
+<p><a href="https://github.com/5paisa/py5paisa/blob/master/py5paisa/order.py">Source</a></p>
                 
               
               
@@ -366,13 +546,13 @@
           </a>
         
         
-          <a href="../info/" title="Fetching information" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../modify/" title="Modiying an order" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Fetching information
+                Modiying an order
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
